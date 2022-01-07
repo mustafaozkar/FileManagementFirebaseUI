@@ -1,0 +1,20 @@
+<div class="btn-group" role="group" aria-label="Basic outlined example">
+    <button (click)="showFileUpload()" type="button" mat-fab>
+        <mat-icon>upload</mat-icon>
+    </button>
+    <button (click)="showMyFiles()" type="button" mat-fab>
+        <mat-icon>list</mat-icon>
+    </button>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <mat-list>
+    <div mat-subheader>Dosyalar</div>
+    <mat-list-item *ngFor="let file of filesModel">
+      <mat-icon mat-list-icon>folder</mat-icon>
+      <div mat-line>{{file.name}}</div>
+      <div mat-line> {{file.uploadDate | date}} </div>
+    <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list>

@@ -1,0 +1,41 @@
+<ul class="mat-elevation-z4 p-1 nav mb-5">
+  <li class="nav-item mx-2">
+    <button routerLink="/" mat-button matTooltip="Ana sayfa">
+      <mat-icon>home</mat-icon>
+    </button>
+  </li>
+ 
+  <div *ngIf="getUser$ | async as User; else notUser">
+    
+  <li class="nav-item mx-2">
+    <button mat-button type="button"  data-bs-toggle="dropdown" aria-expanded="false">
+      <mat-icon >account_circle</mat-icon> <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+    <ul class="dropdown-menu">
+      <li>
+        <button routerLink="/panels" class="dropdown-item">Panel</button>
+      </li>
+      <li><hr class="dropdown-divider"></li>
+      <li>        
+        <button (click)="logout()" class="dropdown-item">Çıkış yap</button>
+      </li>
+    </ul>
+  </li>
+  </div>
+  <ng-template #notUser>
+    <li class="nav-item mx-2">
+      <button routerLink="/account/login" mat-button matTooltip="Giriş yap">
+        <mat-icon>login</mat-icon>
+      </button>
+    </li>
+    <li class="nav-item mx-2">
+      <button routerLink="/account/register" mat-button matTooltip="Kayıt ol">
+        <mat-icon>person_add</mat-icon>
+      </button>
+    </li>
+  
+  </ng-template>
+  
+
+
+</ul>

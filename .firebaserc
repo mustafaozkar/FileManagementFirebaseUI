@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "filemanagement-97ff3": {
+      "hosting": {
+        "FileManagementFirebaseUI": [
+          "filemanagement-97ff3"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "filemanagement-97ff3"
+  }
+}

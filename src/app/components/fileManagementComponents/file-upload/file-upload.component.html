@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <form [formGroup]="fileAddForm">
+    <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12">
+                                
+            <mat-form-field class="example-full-width w-100" appearance="fill">
+                <mat-label>İsim</mat-label>
+                <input class="w-100" type="text" matInput formControlName="name">
+            </mat-form-field>
+
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Dosya seçiniz</label>
+                <input formControlName="file" class="form-control" type="file" id="formFile">
+              </div>
+
+        </div>
+
+        <div class="col-md-12 col-lg-12 col-sm-12 mt-5 mb-5">
+            <div class="d-grid gap-2">
+                <button (click)="add()" class="btn btn-primary" type="button">Ekle</button>
+              </div>
+        </div>
+    </div>
+    </form>
+</div>

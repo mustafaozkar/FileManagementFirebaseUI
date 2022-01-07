@@ -1,0 +1,48 @@
+
+<form [formGroup]="registerForm">
+
+    <div class="d-flex justify-content-evenly">
+    <div class="card text-center mat-elevation-z5" style="width: 30rem;">
+        <div class="card-body">
+            <div class="mb-2 mt-1">
+                <h1 class="text-center">
+                    Kayıt ol
+                </h1>
+            </div>
+            <div class="input-group flex-nowrap m-1 mb-3">
+                <span class="input-group-text" id="addon-wrapping-firstName">
+                    <mat-icon>account_circle</mat-icon>
+                </span>
+                <input type="text" autocomplete="off" formControlName="firstName" class="form-control" placeholder="İsim" aria-label="firstName" aria-describedby="addon-wrapping-firstName">
+            </div>
+
+            <div class="input-group flex-nowrap m-1 mb-3">
+                <span class="input-group-text" id="addon-wrapping-lastName">
+                    <mat-icon>account_circle</mat-icon>
+                </span>
+                <input type="text" autocomplete="off" formControlName="lastName" class="form-control" placeholder="Soyisim" aria-label="lastName" aria-describedby="addon-wrapping-lastName">
+            </div>
+
+            <div class="input-group flex-nowrap m-1 mb-3">
+                <span class="input-group-text" id="addon-wrapping-email">
+                    <mat-icon>email</mat-icon>
+                </span>
+                <input type="text" autocomplete="username" formControlName="email" class="form-control" placeholder="email" aria-label="email" aria-describedby="addon-wrapping-email">
+            </div>
+
+            <div class="input-group flex-nowrap m-1 mb-3">
+                <span class="input-group-text" id="addon-wrapping-password">
+                    <mat-icon>password</mat-icon>
+                </span>
+                <input type="password" autocomplete="new-password" formControlName="password" class="form-control" placeholder="şifre" aria-label="password" aria-describedby="addon-wrapping-password">
+            </div>
+              <div class="mt-2 mb-2">
+                <div class="d-grid gap-2">
+
+                    <button mat-raised-button color="primary" (click)="register()">Kayıt ol</button>
+                </div>
+              </div>
+        </div>
+      </div>
+      </div>
+</form>

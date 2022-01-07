@@ -1,0 +1,9 @@
+<button mat-button (click)="getAll()" >Dosyalarım</button>
+  <mat-list>
+    <mat-list-item *ngFor="let myFile of filesModel">
+      <mat-icon mat-list-icon>folder</mat-icon>
+      <div mat-line>{{myFile.name}}</div>
+      <div mat-line> {{myFile.uploadDate |date}} </div>
+    <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list>
